@@ -6,9 +6,9 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 
-// GetNoticeModel getNoticeModelFromJson(String str) =>
-//     GetNoticeModel.fromJson(json.decode(str));
-GetNoticeModel getNoticeModelFromJson(Uint8List str) =>
+ GetNoticeModel getNoticeModelFromJson(String str) =>
+   GetNoticeModel.fromJson(json.decode(str));
+GetNoticeModel getNoticeModelFromJsonUtf(Uint8List str) =>
     GetNoticeModel.fromJson(json.decode(utf8.decode(str)));
 
 String getNoticeModelToJson(GetNoticeModel data) => json.encode(data.toJson());
